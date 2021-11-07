@@ -17,8 +17,8 @@ export const Item = (props) => {
     const getItens = async () => {
         await axios.get(api + "/compras/" + id ) 
             .then((response) => {
-                console.log(response.data);  
-                setData(response.data);   
+                console.log(response.data.compras);  
+                setData(response.data.compras);   
             })
             .catch(() => {
                 setStatus({
