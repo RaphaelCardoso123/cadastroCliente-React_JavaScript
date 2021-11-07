@@ -79,7 +79,7 @@ app.get('/excluir-cliente/:id', async(req, res)=>{
 
 
 
-//inicio aula ao vivo sabado react (extra)
+//aula react (extra)
 app.get('/cliente/:id/pedidos', async (req, res)=>{
     await pedido. findAll({
         where: {ClienteId : req.params.id}
@@ -182,7 +182,7 @@ app.get('/servico/:id', async(req, res)=>{
 });
 
 
-// (extra)
+//(extra)
 app.post('/itempedido', async(req, res) => {
     await itempedido.create(
         req.body
@@ -201,7 +201,7 @@ app.post('/itempedido', async(req, res) => {
 //fim
 
 
-//teste aula react (extra)
+//aula react (extra)
 app.get('/servico/:id/pedidos', async(req, res)=>{
     await itempedido.findAll({
         where: {ServicoId: req.params.id}})
@@ -259,8 +259,8 @@ app.get('/clientes', async(req, res)=>{
 
 
 
-//ciclo 4 aula aovivo sabado (extra)
-/*app.get('/clientes', async(req, res)=>{ //app.get ou app.post?????
+//aula react (extra)
+/*app.get('/clientes', async(req, res)=>{
     await cliente.create(
         req.body
     ).then(cli =>{
@@ -321,7 +321,7 @@ app.get('/pedidos/:id', async(req, res)=>{
 
 
 
-//teste  (extra)
+//  (extra)
 app.post('/pedidos', async(req, res) =>{
     await pedido.create(
        req.body
@@ -391,17 +391,17 @@ app.put('/pedidos/:id/editaritem', async(req, res)=>{
 });
 
 
-/*
+
 //Compra
 app.post('/compra', async(req, res)=>{
     await compra.create(
         req.body
     );
     res.send("Compra inserida com sucesso!")
-});*/
+});
 
 
-//?
+
 
 app.post('/cliente/:id/compra', async(req, res)=>{
     const compra ={
@@ -429,7 +429,7 @@ app.post('/cliente/:id/compra', async(req, res)=>{
    });
  })
 
-//?
+
 
 
 
@@ -602,7 +602,7 @@ app.post('/produto', async(req, res)=>{
 
 
 
-//teste inicio
+//
 app.get('/produto/:id/compras', async(req, res)=>{
     await itemproduto.findAll({
         where: {ProdutoId: req.params.id}})
@@ -623,7 +623,7 @@ app.get('/produto/:id/compras', async(req, res)=>{
 // 
 
 
- //teste (extra)
+ //(extra)
 app.post('/produto', async(req, res) =>{
     await produto.create(
        req.body
