@@ -60,6 +60,7 @@ app.get('/clientes/lista', async(req, res) => {
 
 
 
+
 app.get('/excluir-cliente/:id', async(req, res)=>{
     await cliente.destroy({
         where: {id: req.params.id}
